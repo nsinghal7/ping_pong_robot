@@ -7,18 +7,18 @@
         </inertial>
         <visual>
             <geometry>
-                <box size="10 10 .005" />
+                <box size=".1 .1 .005" />
             </geometry>
             <material>
                 <color rgba="1 0 0 1" />
             </material>
         </visual>
-        <collision>
+        <!-- <collision>
             <geometry>
                 <box size=".1 .1 .005" />
             </geometry>
             <drake:proximity_properties drake:mu_static="0.25" drake:mu_dynamic="0.2" />
-        </collision>
+        </collision> -->
     </link>
 
     <link name="ball">
@@ -34,12 +34,12 @@
                 <color rgba="0 1 0 1" />
             </material>
         </visual>
-        <collision>
+        <!-- <collision>
             <geometry>
                 <sphere radius="0.01" />
             </geometry>
             <drake:proximity_properties drake:mu_static="0.25" drake:mu_dynamic="0.2" />
-        </collision>
+        </collision> -->
     </link>
 
 
