@@ -46,7 +46,7 @@
         </visual>
     </link>
 
-    <!-- <link name="table">
+    <link name="table">
         <visual>
             <geometry>
                 <box size="${table.wx} ${table.wy} ${table.wz}" />
@@ -66,7 +66,7 @@
                 <color rgba="0 1 1 1" />
             </material>
         </visual>
-    </link> -->
+    </link>
 
     <joint name="paddle_fixed" type="fixed">
         <parent link="paddle_handle" />
@@ -74,7 +74,7 @@
         <origin xyz="0 0 ${head.zoffset}" rpy="${hpi} 0 0" />
     </joint>
 
-    <!-- <joint name="table_fixed" type="fixed">
+    <joint name="table_fixed" type="fixed">
         <parent link="world" />
         <child link="table" />
         <origin xyz="${table.x} ${table.y} ${table.z}" />
@@ -84,7 +84,7 @@
         <parent link="table" />
         <child link="wall" />
         <origin xyz="0 ${wall.yoffset} ${wall.zoffset}" />
-    </joint> -->
+    </joint>
 
     <!-- paddle handle and ball are free -->
 
