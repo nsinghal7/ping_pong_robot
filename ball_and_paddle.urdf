@@ -74,6 +74,11 @@
         <origin xyz="0 0 ${head.zoffset}" rpy="${hpi} 0 0" />
     </joint>
 
+    <joint name="ball_fixed" type="fixed">
+        <parent link="world" />
+        <child link="ball" />
+    </joint>
+
     <!-- <joint name="table_fixed" type="fixed">
         <parent link="world" />
         <child link="table" />
