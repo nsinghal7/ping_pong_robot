@@ -31,7 +31,7 @@
         </visual>
     </link>
 
-    <!-- <link name="ball">
+    <link name="ball">
         <inertial>
             <mass value="${ball.m}" />
             <inertia ixx="${ball.i}" iyy="${ball.i}" izz="${ball.i}" ixy="0" ixz="0" iyz="0" />
@@ -44,7 +44,7 @@
                 <color rgba="0 1 0 1" />
             </material>
         </visual>
-    </link> -->
+    </link>
 
     <!-- <link name="table">
         <visual>
