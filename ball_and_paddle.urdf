@@ -80,6 +80,12 @@
         <axis xyz="0 0 1" />
     </joint>
 
+    <joint name="paddle_prismatic" type="prismatic">
+        <parent link="world" />
+        <child link="paddle_handle" />
+        <axis xyz="0 0 1" />
+    </joint>
+
     <!-- <joint name="table_fixed" type="fixed">
         <parent link="world" />
         <child link="table" />
