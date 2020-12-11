@@ -1,36 +1,6 @@
 <?xml version="1.0"?>
 
-<robot name="BallAndPaddle">
-    <link name="paddle_head">
-        <inertial>
-            <mass value="${head.m}" />
-            <inertia ixx="${head.ix}" iyy="${head.ix}" izz="${head.iz}" ixy="0" ixz="0" iyz="0" />
-        </inertial>
-        <visual>
-            <geometry>
-                <cylinder radius="${head.r}" length="${head.l}" />
-            </geometry>
-            <material>
-                <color rgba="1 0 0 1" />
-            </material>
-        </visual>
-    </link>
-
-    <link name="paddle_handle">
-        <inertial>
-            <mass value="${handle.m}" />
-            <inertia ixx="${handle.ix}" iyy="${handle.ix}" izz="${handle.iz}" ixy="0" ixz="0" iyz="0" />
-        </inertial>
-        <visual>
-            <geometry>
-                <cylinder radius="${handle.r}" length="${handle.l}" />
-            </geometry>
-            <material>
-                <color rgba="1 1 0 1" />
-            </material>
-        </visual>
-    </link>
-
+<robot name="BallAndTable">
     <link name="ball">
         <inertial>
             <mass value="${ball.m}" />
@@ -68,12 +38,6 @@
         </visual>
     </link>
 
-    <joint name="paddle_fixed" type="fixed">
-        <parent link="paddle_handle" />
-        <child link="paddle_head" />
-        <origin xyz="0 0 ${head.zoffset}" rpy="${hpi} 0 0" />
-    </joint>
-
     <joint name="table_fixed" type="fixed">
         <parent link="world" />
         <child link="table" />
@@ -85,7 +49,5 @@
         <child link="wall" />
         <origin xyz="0 ${wall.yoffset} ${wall.zoffset}" />
     </joint>
-
-    <!-- paddle handle and ball are free -->
 
 </robot>

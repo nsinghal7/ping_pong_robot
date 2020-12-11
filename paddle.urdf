@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<robot name="Paddle">
+    <link name="paddle_head">
+        <inertial>
+            <mass value="${head.m}" />
+            <inertia ixx="${head.ix}" iyy="${head.ix}" izz="${head.iz}" ixy="0" ixz="0" iyz="0" />
+        </inertial>
+        <visual>
+            <geometry>
+                <cylinder radius="${head.r}" length="${head.l}" />
+            </geometry>
+            <material>
+                <color rgba="1 0 0 1" />
+            </material>
+        </visual>
+    </link>
+
+    <link name="paddle_handle">
+        <inertial>
+            <mass value="${handle.m}" />
+            <inertia ixx="${handle.ix}" iyy="${handle.ix}" izz="${handle.iz}" ixy="0" ixz="0" iyz="0" />
+        </inertial>
+        <visual>
+            <geometry>
+                <cylinder radius="${handle.r}" length="${handle.l}" />
+            </geometry>
+            <material>
+                <color rgba="1 1 0 1" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="paddle_fixed" type="fixed">
+        <parent link="paddle_handle" />
+        <child link="paddle_head" />
+        <origin xyz="0 0 ${head.zoffset}" rpy="${hpi} 0 0" />
+    </joint>
+</robot>
