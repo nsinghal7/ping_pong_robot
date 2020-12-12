@@ -11,6 +11,8 @@
         <limit>
           <lower>-.5</lower>
           <upper>.5</upper>
+          <effort>10</effort>
+          <velocity>.5</velocity>
         </limit>
       </axis>
     </joint>
@@ -59,6 +61,8 @@
         <limit>
           <lower>-2</lower>
           <upper>2</upper>
+          <effort>10</effort>
+          <velocity>.5</velocity>
         </limit>
       </axis>
     </joint>
